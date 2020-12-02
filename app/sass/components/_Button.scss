@@ -1,0 +1,57 @@
+.button {
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0;
+	transition: box-shadow 0.05s linear 0.05s;
+
+	&:focus,
+	&:hover {
+		outline: none;
+		box-shadow: $box-shadow_3;
+	}
+
+	@at-root &_rect {
+		padding: 10px 16px;
+		max-width: 130px;
+		min-width: 100px;
+		border: none;
+		border-radius: 2px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+
+		@media (max-width: $hd) {
+			max-width: 100px;
+			min-width: 70px;
+			padding: 7px 12px;
+		}
+	}
+
+	@at-root &_simple {
+		box-shadow: $box-shadow_1;
+		background-color: $alpine;
+	}
+
+	@at-root &_light {
+		background-color: $apple;
+		color: $alpine;
+		text-shadow: $text-shadow_1;
+	}
+
+	@at-root &_round {
+		border-radius: 50%;
+		width: 35px;
+		height: 35px;
+		background-color: $alpine;
+		color: $apple;
+		border: 2px solid $apple;
+		display: inline-block;
+
+		@media (max-width: $hd) {
+			width: 25px;
+			height: 25px;
+		}
+	}
+}

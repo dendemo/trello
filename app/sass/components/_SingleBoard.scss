@@ -1,0 +1,48 @@
+.single-board {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+
+	@media (max-width: $phone) {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	@at-root &__row {
+		width: 100%;
+		text-align: center;
+		position: relative;
+		margin-bottom: 50px;
+	}
+
+	@at-root &__title {
+		box-shadow: $box-shadow_1;
+		text-shadow: $text-shadow_1;
+		padding: 20px 50px;
+		margin: 10px 50px;
+		background-color: $apple;
+		border-radius: 5px;
+		color: $alpine;
+		display: inline-block;
+
+		@media (max-width: $hd) {
+			padding: 10px 50px;
+		}
+	}
+
+	@at-root &__link {
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		color: $apple;
+	}
+
+	@at-root &__single-list {
+		margin: 0 30px 30px 0;
+
+		@media (max-width: $phone) {
+			margin: 0 0 20px 0;
+		}
+	}
+}

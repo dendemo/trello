@@ -1,0 +1,71 @@
+//=================RESET========================//
+* {
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+input {
+	-webkit-appearance: none;
+}
+//================BASE===================//
+body {
+	margin: 20px;
+}
+//================TYPO===================//
+html {
+	font-family: "Grandstander", cursive;
+	letter-spacing: 1px;
+	color: $black-queen;
+
+	@media (max-width: $hd) {
+		font-size: 62.5%;
+	}
+}
+
+h2 {
+	font-size: 1.7rem;
+}
+
+h3 {
+	font-size: 1.8rem;
+}
+
+h4 {
+	font-size: 1.6rem;
+}
+
+p {
+	font-size: 1.6rem;
+}
+
+a {
+	color: inherit;
+}
+
+input {
+	font-size: 1.4rem;
+	font-family: inherit;
+	letter-spacing: inherit;
+	color: inherit;
+
+	&::placeholder {
+		color: inherit;
+		opacity: 0.5;
+	}
+}
+
+button {
+	font-size: 1.4rem;
+	font-family: inherit;
+	letter-spacing: inherit;
+	color: inherit;
+}

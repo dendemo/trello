@@ -1,0 +1,38 @@
+//===================COLORS===================//
+$apple: #9fe7a4;
+$alpine: #ffffff;
+$black-queen: #000000;
+$flower: #6195ed;
+$queen: rgba($black-queen, 0.5);
+$alarm: #ff0000;
+$grass: #caffde;
+$ocean: #0a2c74;
+//===================SHADOWS====================//
+$box-shadow_1: 1px 1px 4px 0px $queen;
+$box-shadow_2: inset 1px 1px 4px 0px $queen;
+$box-shadow_3: 0 0 0 2px $flower;
+$text-shadow_1: 1px 1px 3px $queen;
+//================BREAKPOINTS===================//
+$phone: 500px;
+$hd: 1366px;
+//==================KEYFRAMES==================//
+@keyframes fade_on {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fade_double {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 1;
+	}
+}

@@ -1,0 +1,26 @@
+.single-list {
+	box-shadow: $box-shadow_1;
+	width: 300px;
+	padding: 20px 10px;
+	border-radius: 2px;
+
+	@media (max-width: $hd) {
+		width: 200px;
+	}
+
+	@at-root &__title {
+		margin: 0;
+		text-transform: uppercase;
+		text-align: center;
+		border-bottom: 1px solid;
+		padding-bottom: 20px;
+	}
+
+	@at-root &__form {
+		margin-top: 10px;
+	}
+
+	@at-root &__all-cards {
+		margin-top: 10px;
+	}
+}

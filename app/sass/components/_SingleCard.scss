@@ -1,0 +1,79 @@
+.single-card {
+	&:not(:last-child) {
+		margin-bottom: 10px;
+	}
+
+	animation: fade_on 0.3s forwards;
+
+	@at-root &__item {
+		box-shadow: $box-shadow_1;
+		padding: 10px;
+		border-radius: 2px;
+		display: flex;
+		align-items: center;
+		cursor: grab;
+
+		@at-root &_active {
+			background-color: $grass;
+		}
+
+		@at-root &_done {
+			box-shadow: $box-shadow_2;
+			background-color: rgba($grass, 0.5);
+			opacity: 0.4;
+		}
+	}
+
+	@at-root &__title {
+		margin: 0;
+		overflow-wrap: break-word;
+		max-width: 90%;
+	}
+
+	@at-root &__btn {
+		margin-left: auto;
+		flex-shrink: 0;
+		height: 30px;
+		width: 10%;
+		position: relative;
+		border: none;
+		// border: 1px solid orange;
+		outline: none;
+		background-color: transparent;
+		cursor: pointer;
+
+		@media (max-width: $hd) {
+			height: 20px;
+		}
+
+		&:before {
+			content: "\2a2f";
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			font-size: 30px;
+			line-height: 1;
+
+			@media (max-width: $hd) {
+				font-size: 20px;
+			}
+		}
+
+		&:focus {
+			outline: 1px solid $ocean;
+		}
+
+		@at-root &_active {
+			&:before {
+				content: "\2717";
+			}
+		}
+
+		@at-root &_done {
+			&:before {
+				content: "\2713";
+			}
+		}
+	}
+}

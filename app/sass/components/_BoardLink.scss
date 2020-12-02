@@ -1,0 +1,47 @@
+.board-link {
+	box-shadow: $box-shadow_1;
+	width: 350px;
+	padding: 50px;
+	border-radius: 5px;
+	animation: fade_on 0.3s forwards;
+
+	@media (max-width: $hd) {
+		width: 250px;
+		padding: 30px;
+	}
+
+	@at-root &_highlighted {
+		background-color: $apple;
+	}
+
+	@at-root &_simple {
+		background-color: $alpine;
+	}
+
+	@at-root &_clickable {
+		cursor: pointer;
+	}
+
+	@at-root &__title {
+		text-align: center;
+		margin: 0;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+
+		@at-root &_highlighted {
+			color: $alpine;
+			text-shadow: $text-shadow_1;
+		}
+
+		@at-root &_crown {
+			margin: 0 -30px;
+			padding: 0 30px 10px;
+			border-bottom: 1px solid $alpine;
+		}
+	}
+
+	&__form {
+		margin-top: 25px;
+	}
+}

@@ -1,0 +1,16 @@
+.error-page {
+	@at-root &__title {
+		font-size: 2rem;
+	}
+
+	@at-root &__link {
+		font-size: 2rem;
+		color: $ocean;
+		border-bottom: 2px solid;
+		transition: all 0.1s 0.05s;
+
+		&:hover {
+			border-bottom-color: transparent;
+		}
+	}
+}

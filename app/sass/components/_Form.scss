@@ -1,0 +1,74 @@
+.form {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	position: relative;
+
+	@at-root &_animated {
+		animation: fade_on 0.3s forwards;
+	}
+
+	@at-root &__control {
+		box-shadow: $box-shadow_1;
+		border: none;
+		width: 100%;
+		background-color: $alpine;
+		border-radius: 2px;
+		padding: 10px;
+
+		&:focus {
+			box-shadow: $box-shadow_1, $box-shadow_3;
+			outline: none;
+		}
+	}
+
+	@at-root &__error {
+		position: relative;
+		background-color: $alpine;
+		margin: 10px 0 0 10px;
+		padding: 10px;
+		box-shadow: 0 0 3px 1px $alarm;
+		border-radius: 2px;
+		font-size: 1.4rem;
+		animation: fade_double 1.5s alternate 2;
+
+		&:before {
+			content: "";
+			display: block;
+			position: absolute;
+			top: -5px;
+			transform: rotate(45deg);
+			background-color: $alpine;
+			width: 10px;
+			height: 10px;
+			left: 20px;
+			box-shadow: 0 0 3px 1px $alarm;
+		}
+
+		&:after {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 0px;
+			background-color: $alpine;
+			width: 20px;
+			left: 15px;
+			height: 12px;
+		}
+	}
+
+	@at-root &__button {
+		margin-top: 25px;
+
+		&:not(:last-child) {
+			margin-right: 10px;
+		}
+	}
+
+	@at-root &__button_round {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		transform: translate(50%, 50%);
+	}
+}

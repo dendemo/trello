@@ -1,0 +1,39 @@
+@font-face {
+  font-family: "fontello";
+  src: url("../font/fontello.woff2") format("woff2"),
+    url("../font/fontello.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon {
+  &::before {
+    font-family: "fontello";
+    display: inline-block;
+    letter-spacing: normal;
+  }
+
+  @at-root &_left-circled:before {
+    content: "\f0a8";
+  }
+
+  @at-root &_cancel:before {
+    content: "\e800";
+  }
+
+  @at-root &_s {
+    font-size: 25px;
+
+    @media (max-width: $hd) {
+      font-size: 17px;
+    }
+  }
+
+  @at-root &_m {
+    font-size: 50px;
+
+    @media (max-width: $hd) {
+      font-size: 30px;
+    }
+  }
+}

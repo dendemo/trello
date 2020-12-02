@@ -1,0 +1,21 @@
+.create-list-link {
+	box-shadow: $box-shadow_1;
+	border: none;
+	width: 160px;
+	height: 120px;
+	padding: 10px;
+	cursor: pointer;
+	background-color: $ocean;
+	color: $alpine;
+	border-radius: 2px;
+	transition: transform 0.2s 0.03s;
+
+	@media (max-width: $hd) {
+		width: 120px;
+		height: 90px;
+	}
+
+	&:hover {
+		transform: scale(1.1, 1.1);
+	}
+}
