@@ -6,4 +6,4 @@
   <li>React</li>
   <li>Webpack</li>
 </ul>
-<h4>Go to app: <a href="https://artdemo.github.io/trello/dist">artdemo.github.io/trello/dist</a></h4>
+<h4>Go to app: <a href="https://dendemo.github.io/trello/dist">dendemo.github.io/trello/dist</a></h4>
